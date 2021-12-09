@@ -9,7 +9,7 @@ public class SeqSearch {
 			if(i == n)
 				return -1; // 검색 실패, -1을 반환 (i가 요소수와 동일해지면 더이상 검색할 배열의 값이 없다는 의미)
 			if(a[i] == key)
-				return 1; // 검색 성공, 1을 반환
+				return i; // 검색 성공, i를 반환
 			i++;
 		}
 	}
