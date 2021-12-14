@@ -1,7 +1,7 @@
 package chap03;
 import java.util.Scanner;
 import java.util.Arrays;
-class BinarySearchTester {
+class BinarySearchTester2 {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
@@ -27,8 +27,14 @@ class BinarySearchTester {
 		
 		int idx = Arrays.binarySearch(x, ky); // 배열 x에서 키 값이 ky인 요소를 검색
 		
-		if(idx < 0)
+		if(idx < 0) {
 			System.out.println("그 값의 요소가 없습니다.");
+			for(int i = 0; i < num; i++) 
+				if(ky < x[i]) {
+					System.out.println("삽입 포인트는" + x[i] + "입니다.");
+					break;
+				}
+		}
 		
 		else
 			System.out.println(ky + "은(는) x[" + idx + "]에 있습니다.");
